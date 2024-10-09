@@ -108,7 +108,7 @@ class ClaimControllerTest {
         mockMvc.perform(post("/api/claims/transfer-to-penampungan")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Data transferred successfully"));
+                .andExpect(content().string("Data berhasil ditransfer"));
 
         verify(claimService, times(1)).transferKURAndPENClaimsToPenampungan();
     }
